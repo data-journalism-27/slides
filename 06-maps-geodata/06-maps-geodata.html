@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Data Journalism</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Simon Munzert" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+    <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+    <link rel="stylesheet" href="../simons-touch.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Data Journalism
+]
+.subtitle[
+## Session 6: Mapping and geodata
+]
+.author[
+### Simon Munzert
+]
+.institute[
+### Hertie School | <a href="https://github.com/data-journalism-26">GRAD-E1493</a>
+]
+
+---
+
+background-image: url(pics/star-trek-space.jpg)
+background-size: contain
+background-position: center
+background-color: #000000
+
+&lt;style type="text/css"&gt;
+@media print {
+  .has-continuation {
+    display: block !important;
+  }
+}
+&lt;/style&gt;
+
+
+
+
+
+
+# Space. The final frontier...
+
+
+
+---
+# Today
+
+&lt;/br&gt;&lt;/br&gt;
+
+1. [Why space matters for journalism](#classics)
+
+2. [Maps: dos and don'ts](#dosndonts)
+
+3. [Beyond maps](#beyondmaps)
+
+
+
+---
+class: inverse, center, middle
+name: spatial
+
+# Why space matters for journalism
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px style="width:1000px; margin:auto;"/&gt;&lt;/html&gt;
+
+
+---
+# Why space matters generally
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;div align="center" style="font-size:2em;"&gt;
+&lt;b&gt;Everything is related to everything else,&lt;br&gt;but near things are more related than distant things.&lt;/b&gt;
+&lt;/div&gt;
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+Tobler, Waldo. (1970). A Computer Movie Simulating Urban Growth in the Detroit Region. *Economic Geography* 46:234-240. https://doi.org/10.2307/143141
+
+
+---
+# Why space matters for journalism
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;div align="center" style="font-size:2em;"&gt;
+&lt;b&gt;The "where" of a story is central to journalism.&lt;/b&gt;
+&lt;/div&gt;
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+Gomes, A., Brito, E., Morais, L. A., &amp; Ferreira, N. (2025). How Do Data Journalists Design Maps to Tell Stories? *IEEE Transactions on Visualization and Computer Graphics.*
+
+N. Usher. News cartography and epistemic authority in the era of big data: Journalists as map-makers, map-users, and map-subjects. *New Media &amp; Society*, 22(2):247–263, 2020.
+
+---
+# 1854 Broad Street cholera outbreak
+
+.pull-left[
+&lt;div align="center"&gt;
+&lt;br&gt;
+&lt;img src="pics/snow-cholera-map.jpeg" width=500&gt;
+&lt;/div&gt;
+]
+
+.pull-right[
+- One of the most famous data viusalizations of all times: [John Snow](https://en.wikipedia.org/wiki/John_Snow)'s cholera case map.
+- The [Broad Street cholera outbreak](https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak) in in Soho, London in 1854 was studied by physician John Snow to study its causes (rival hypotheses: germ-contaminated water vs. airborne transmission).
+- The germ theory was not established at this point but the map helped highlight how cases clustered around a contaminated pump (which was by far not the only source of contaminated water though).
+- Fun fact: this is what doing good data viz gives you:
+
+&lt;div align="center"&gt;
+&lt;img src="pics/john-snow-pub.jpeg" width=225&gt;
+&lt;/div&gt;
+]
+
+
+---
+# Mapping political outcomes
+
+&lt;div align="center"&gt;
+&lt;img src="pics/fivethirtyeight-maps.png" style="width:95%; height:auto;"&gt;
+&lt;/div&gt;
+
+
+---
+# Mapping political outcomes
+
+&lt;div align="center"&gt;
+&lt;img src="pics/zeit-wahlkarte-eu.png" style="width:60%; height:auto;"&gt;
+&lt;/div&gt;
+
+`Source` [ZEIT Online](https://www.zeit.de/politik/ausland/2024-07/europawahl-2024-ergebnisse-gemeinden-laender-karte?freebie=220fa61c)
+
+
+---
+# Unterstanding international affairs
+
+&lt;div align="center"&gt;
+&lt;img src="pics/economist-iran-war.png" style="width:60%; height:auto;"&gt;
+&lt;/div&gt;
+
+`Source` [The Economist](https://www.economist.com/interactive/middle-east-and-africa/2026/03/06/the-iran-war-has-entered-a-new-phase)
+
+---
+# Unterstanding international affairs
+
+&lt;div align="center"&gt;
+&lt;video width="900" autoplay muted loop&gt;
+  &lt;source src="pics/zeit-strait-hormus.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+
+`Source` [Die Zeit](https://www.zeit.de/wirtschaft/2026-03/strasse-von-hormus-schifffahrt-oeltanker-frachter-iran?freebie=640aed06)
+
+---
+# Educating geographically illiterate audiences
+
+&lt;div align="center"&gt;
+&lt;img src="pics/zeitzoff-finding-ukraine.png" style="width:36%; height:auto;"&gt;
+&lt;/div&gt;
+
+`Source` [Washington Post/Monkey Cage](https://www.washingtonpost.com/news/monkey-cage/wp/2014/04/07/the-less-americans-know-about-ukraines-location-the-more-they-want-u-s-to-intervene/); see also [Good Authority](https://goodauthority.org/news/finding-ukraine-on-a-map-revisited/).
+
+
+
+---
+# The design space of journalistic maps
+
+&lt;div align="center"&gt;
+&lt;img src="pics/gomes-maps-journalists.png" style="width:80%; height:auto;"&gt;
+&lt;br&gt;
+&lt;code&gt;Source&lt;/code&gt; &lt;a href="https://arxiv.org/abs/2508.10903"&gt;Gomes et al. (2025) "How do Data Journalists Design Maps to Tell Stories?"&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div align="center"&gt;
+&lt;br&gt;
+&lt;img src="pics/geospatial-1.png" style="width:55%; height:auto;"&gt;
+&lt;br&gt;
+&lt;code&gt;Source&lt;/code&gt; &lt;a href="https://clauswilke.com/dataviz/geospatial-data.html"&gt;Wilke, Fundamentals of Data Visualization&lt;/a&gt;
+&lt;/div&gt;
+
+
+
+---
+class: inverse, center, middle
+name: dosndonts
+
+# Maps: Dos and don'ts
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px style="width:1000px; margin:auto;"/&gt;&lt;/html&gt;
+
+---
+# Fox News 2009
+
+&lt;div align="center"&gt;
+&lt;img src="pics/fail-fox-iraq-egypt.jpg" style="width:65%; height:auto;"&gt;
+&lt;a href="https://www.huffpost.com/entry/fox-news-cant-find-egypt-map_n_816540" style="font-size:0.8em;"&gt;Source&lt;/a&gt;
+&lt;/div&gt;
+
+---
+# WSJ 2012
+
+&lt;div align="center"&gt;
+&lt;img src="pics/wsj-election-map.webp" style="width:65%; height:auto;"&gt;
+&lt;a href="https://www.vox.com/2015/2/18/8056325/bad-maps" style="font-size:0.8em;"&gt;Source&lt;/a&gt;
+&lt;/div&gt;
+
+.center[
+&lt;small&gt;Fox News. Alabama and Mississippi switched on a U.S. map.&lt;/small&gt;
+]
+
+
+
+---
+# Maps are beautiful ...
+
+&lt;div align="center"&gt;
+&lt;img src="pics/midtermmap-1.png" style="width:65%; height:auto;"&gt;
+&lt;/div&gt;
+
+.center[
+&lt;small&gt;2019 US Midterm Election results; source: nytimes.com&lt;/small&gt;
+]
+
+
+---
+# ... but sometimes misleading
+
+&lt;div align="center"&gt;
+&lt;br&gt;
+&lt;img src="pics/midtermmap-1.png" style="width:46%; height:auto;"&gt; &amp;emsp;
+&lt;img src="pics/midtermmap-2.png" style="width:46%; height:auto;"&gt;
+&lt;/div&gt;
+
+##  Don't confuse area size with actual data of interest
+
+Large geographic areas attract attention regardless of their data values. Consider cartograms, hex tile maps, or dot density maps to counteract this.&lt;/small&gt;
+
+
+
+---
+# Consider if a map is the right choice
+
+&lt;div align="center"&gt;
+&lt;img src="pics/liquor-map.gif" style="height:30%; width:auto;"&gt; &amp;emsp;
+&lt;img src="pics/liquor-small-multiples.png" style="height:30%; width:auto;"&gt;
+&lt;/div&gt;
+
+## Maps help highlight geographical patterns, but is that your story?
+Also discussed [here](https://statmodeling.stat.columbia.edu/2014/04/10/small-multiples-lineplots-maps-ok-always-yes-case/). The small multiple plot on the right does a much better job at showing the trends over time and comparing across countries, while the map on the left is more visually striking but less informative. The map also exaggerates the differences between countries due to the varying sizes of the areas.
+
+---
+# Consider if a map is the right choice
+
+&lt;div align="center"&gt;
+&lt;img src="pics/liquor-skewed-map.png" style="height:35%; width:auto;"&gt; &amp;emsp;
+&lt;img src="pics/liquor-small-multiples.png" style="height:30%; width:auto;"&gt;
+&lt;/div&gt;
+
+## Maps help highlight geographical patterns, but is that your story?
+Also discussed [here](https://statmodeling.stat.columbia.edu/2014/04/10/small-multiples-lineplots-maps-ok-always-yes-case/). The small multiple plot on the right does a much better job at showing the trends over time and comparing across countries, while the map on the left is more visually striking but less informative. The map also exaggerates the differences between countries due to the varying sizes of the areas. A *cartogram* is almost never the right choice.
+
+
+---
+# Cartogram heatmaps can help (or confuse?)
+
+&lt;div align="center"&gt;
+&lt;br&gt;
+&lt;img src="pics/wilke-map-2.png" style="width:45%; height:auto;"&gt;
+&lt;img src="pics/wilke-map-3.png" style="width:45%; height:auto;"&gt;
+&lt;/div&gt;
+
+
+---
+# Why not try small map multiples?
+
+.pull-left[
+&lt;div align="center"&gt;
+&lt;br&gt;
+&lt;img src="pics/vouchermapsBAYES2000.png" width=450&gt;
+&lt;/div&gt;
+]
+
+
+.pull-right[
+&lt;div align="center"&gt;
+&lt;br&gt;
+&lt;img src="pics/temp-anomalies-ger.webp" width=400&gt;
+&lt;/div&gt;
+]
+
+
+---
+# Use color scales wisely
+
+.pull-left[
+## Three fundamental use cases for color in data visualizations:
+  1. We can use color to **distinguish groups** of data from each other;
+  2. We can use color to **represent data values**; and 
+  3. We can use color to **highlight**.
+  
+Use [ColorBrewer](https://colorbrewer2.org/) to choose palettes.
+]
+
+.pull-right[
+&lt;div align="center"&gt;
+&lt;img src="pics/sequential-scales-1.png" width=350&gt;
+&lt;img src="pics/map-Texas-rainbow-1.png" style="width:35%; height:auto;"&gt; &amp;emsp;
+&lt;img src="pics/map-Texas-income-1.png" style="width:35%; height:auto;"&gt;
+&lt;img src="pics/map-Texas-race-1.png" width=250&gt;
+&lt;/div&gt;
+]
+
+
+---
+# Normalize your data
+
+&lt;div align="center"&gt;
+&lt;br&gt;
+&lt;img src="pics/normalize-choropleth-covid.png" style="width:80%; height:auto;"&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+
+## Mapping raw counts in choropleths can be misleading
+
+Absolute counts can be misleading - large units/states dominate (left plot). Instead, normalize using meaningful baselines, such as per capita rates (right plot). If your story is indead about area size, that is probably not necessary. [Source.](https://handsondataviz.org/normalize-choropleth.html)
+
+
+
+---
+# Keep things simple
+
+&lt;div align="center"&gt;
+&lt;img src="pics/minards-map-translated.png" width=800&gt;
+&lt;/div&gt;
+
+## Don't overload your map with too many variables
+
+Minard's famous [map of Napoleon's march on Russia in 1812](https://commons.wikimedia.org/wiki/File:Minard.png) has been regarded a masterpiece of data visualization. It combines multiple variables (geography, time, temperature, and troop size) in a clear and concise way. On the other hand, it's clearly **overloaded**, and one might ask if the same story could not have been told with several plots that are not as busy.
+
+
+---
+# Don't forget about your projection
+
+.pull-left[
+## The issue
+
+The Earth is a sphere, but maps are flat. The choice of projection can affect how readers perceive the data and the story you want to tell.
+
+On a Mercator map, Greenland appears the same size as Africa — but Africa is actually 14× larger. Try [thetruesize.com](https://thetruesize.com). Use equal-area projections (e.g., Robinson, Equal Earth) for world maps showing data.
+
+&lt;div align="center"&gt;
+&lt;img src="pics/world-projection.png" style="width:45%; height:auto;"&gt;
+&lt;/div&gt;
+&lt;code&gt;Source&lt;/code&gt; &lt;a href="https://clauswilke.com/dataviz/geospatial-data.html"&gt;Wilke, Fundamentals of Data Visualization&lt;/a&gt;
+]
+
+.pull-right-center[
+&lt;div align="center"&gt;
+&lt;img src="pics/world-projection.gif" style="width:85%; height:auto;"&gt;
+&lt;/div&gt;
+
+`Source` [Wikipedia](https://en.wikipedia.org/wiki/Mercator_projection#/media/File:Worlds_animate.gif)
+]
+
+
+---
+# Don't forget about your projection
+
+.pull-left[
+## The issue
+
+The Earth is a sphere, but maps are flat. The choice of projection can affect how readers perceive the data and the story you want to tell.
+
+On a Mercator map, Greenland appears the same size as Africa — but Africa is actually 14× larger. Try [thetruesize.com](https://thetruesize.com). Use equal-area projections (e.g., Robinson, Equal Earth) for world maps showing data.
+
+&lt;div align="center"&gt;
+&lt;img src="pics/world-projection.png" style="width:45%; height:auto;"&gt;
+&lt;/div&gt;
+&lt;code&gt;Source&lt;/code&gt; &lt;a href="https://clauswilke.com/dataviz/geospatial-data.html"&gt;Wilke, Fundamentals of Data Visualization&lt;/a&gt;
+]
+
+.pull-right-center[
+&lt;div align="center"&gt;
+&lt;img src="pics/zeit-iran-flight-projection.png" style="width:70%; height:auto;"&gt;
+&lt;/div&gt;
+
+`Source` [DIE ZEIT](https://www.zeit.de/wirtschaft/2026-03/lufthansa-europa-asien-nahostkrieg-flugverkehr?freebie=8bcf7aa3)
+]
+
+
+---
+class: inverse, center, middle
+name: beyond maps
+
+# Beyond maps
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px style="width:1000px; margin:auto;"/&gt;&lt;/html&gt;
+
+
+---
+class: exercise
+# Discussion
+
+## Discuss
+&lt;br&gt;
+1. **Beyond the map:** Geospatial data is often treated as input for maps — 
+   but what other analytical uses does it enable? Think of examples from 
+   journalism or your own work.
+   
+2. **Spatial thinking as a method:** When does location *explain* something, 
+   and when is it just context? How do you know when a spatial analysis 
+   adds real insight vs. visual appeal?
+   
+3. **Access and limits:** Where does geospatial data come from, and who controls it? What are the ethical and practical constraints journalists face when working with it?
+
+
+
+---
+class: center
+
+# Streetmap data
+
+&lt;div align="center"&gt;
+&lt;img src="pics/nyt-streetmaps-voting.png" style="width:50%; height:auto;"&gt;
+&lt;/div&gt;
+
+`Source` [New York Times](https://www.nytimes.com/interactive/2021/upshot/trump-biden-geography-quiz.html)
+
+
+---
+class: center
+
+# Satellite data
+
+&lt;div align="center"&gt;
+&lt;img src="pics/buzzfeed-camps.png" style="width:50%; height:auto;"&gt;
+&lt;/div&gt;
+
+`Source` [Buzzfeed](https://www.buzzfeednews.com/article/meghara/china-new-internment-camps-xinjiang-uighurs-muslims)
+
+
+---
+# Geospatial data beyond maps
+
+## Location as a join key
+Link datasets that share no common ID but share space — e.g., match industrial 
+sites to asthma hospitalization records by proximity.
+
+##  Distance and proximity as a variable
+Not "where is X?" but "how far is X from Y, and does that distance predict 
+something?" — access to schools, pollution exposure, ...
+
+## Satellite and remote sensing data as a source
+Count ships in a port, measure deforestation, detect construction in sanctioned 
+countries. The imagery is evidence.
+
+## Geocoding as a method for record linkage
+Convert messy address data into coordinates to deduplicate records or match 
+across datasets that otherwise can't be joined.
+
+
+&gt; **Coordinates are a universal join key** — they connect datasets that have 
+nothing else in common. That's the analytical superpower, not (just) the map.
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false,
+  "ratio": "16:9",
+  "hash": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<style>
+  .logo {
+    background-image: url("../hertieschool-neg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 1.5em;
+    right: 1em;
+    width: 150px;
+    height: 128px;
+    z-index: 0;
+  }
+</style>
+  
+  <script>
+  document
+.querySelectorAll(
+  '.remark-slide-content' +
+    ':not(.title-slide)' +
+    ':not(.inverse)' +
+	
+    // add additional classes to exclude here, e.g.
+  // ':not(.inverse)' +
+    ':not(.hide-logo)'
+)
+.forEach(el => {
+  el.innerHTML += '<div class="logo"></div>';
+});
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
